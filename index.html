@@ -1,491 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Católico Online — Projeto de evangelização</title>
-
-<style>
-
-/* trocar #800080 por 6b0f1a */
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: #222;
-}
-
-header {
-  background: #800080;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  border-bottom: 1px solid #ddd;
-}
-
-.quaresma img{
-  width: 700px;
-}
-
-.quaresma {
-  align-items: center;
-  background-color: #800080;
-  border-radius: 8px;
-  width: 700px;
-  padding: 8px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #800080;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ff0000;
-}
-
-main {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-
-.form {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.card {
-  background: rgb(255, 255, 255);
-  padding: 18px;
-  width: 400px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px #800080;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.ccb-title {
-  color: #ff0000;
-}
-
-.ccb-descr {
-  color: #ffffff;
-}
-
-.ccb-descr h3 {
-  color: #ffa600;
-}
-
-.ccb-button {
-  color: #ff0000;
-  background-color: #f4f4f4;
-}
-
-.ccb-button:hover {
-  color: #f4f4f4;
-  background-color: #ff0000;
-}
-
-.ccb {
-  background-color: #800080;
-  border: #222;
-  border-radius: 20px;
-  width: 700px;
-}
-
-.card:hover {
-  padding: 30px;
-}
-
-.card button{
-  padding: 13px;
-}
-
-.card button:hover {
-  padding: 18px;
-
-  transition: all;
-}
-
-button {
-  background: #800080;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 9px;
-}
-
-.hidden {
-  display: none;
-}
-
-#minhaDiv {
-  border: 2px solid #888888;
-  border-radius: 5px;
-  padding: 12px;
-}
-.explorer-button {
-  color: #ffffff;
-  margin: auto;
-  position: relative;
-  width: 100px;
-}
-
-.ns-avisoimg {
-  width: 800px;
-}
-
-button:hover {
-  background: #ff0000;
-}
-
-.santos-img {
-  width: 800px;
-  cursor: pointer;
-}
-
-img {
-  cursor: pointer;
-}
-
-.filosofia h1{
-  color: #464545ff;
-}
-
-.imgsaocarlos {
-  width: 200px;
-}
-
-.imgsaocarlos:hover {
-  width: 400px;
-}
-
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Católico Online • Em Manutenção</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#ffffff,#ffffff);
+      color:#fff;
+      padding:20px;
+    }
+    .container{
+      max-width:1100px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:24px;
+      padding:40px;
+      backdrop-filter:blur(10px);
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
+    }
+    img{width:100%;max-width:500px}
+    h1{font-size:3rem;color:#daac42;margin-bottom:20px}
+    p{font-size:1.2rem;line-height:1.7;color:#000000;margin-bottom:25px}
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#ffd36a;
+      color:#b9a700;
+      text-decoration:none;
+      border-radius:14px;
+      font-weight:bold;
+      transition:.3s;
+    }
+    .btn:hover{transform:translateY(-4px)}
+    .status{margin-top:20px;font-size:.95rem;opacity:.8}
+    @media(max-width:900px){
+      .container{grid-template-columns:1fr;text-align:center}
+      h1{font-size:2.2rem}
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-  <h1>𝕮𝖆𝖙ó𝖑𝖎𝖈𝖔 𝕺𝖓𝖑𝖎𝖓𝖊</h1>
-  <h4>QUARESMA</h4>
-  <p>Projeto de evangelização</p>
-</header>
-
-<nav>
-  <a href="#guiaid">Guia</a>
-  <a href="#postsid">Posts</a>
-  <a href="#comunidadeid">Comunidade</a>
-  <a href="#santosid">Santos</a>
-  <a href="#produtosid">Produtos</a>
-  <a href="#filosofiaid">Filosofia</a>
-</nav>
-
-  <div class="home">
-    <h1>Bem vindo</h1>
-    <p>Seja bem-Vindo a nossa página oficial do projeto Católico Online. <strong>Nosso dever é evangelizar!</strong></p>
-    <p>O projeto Católico Onlinje tem como objetivo principal de evangelizar a fé Católica. Ele foi criado com um design fácil e criativo, trazendo a facilidade de mecher e explorar ele. O Católico Online vem junto com diversas outras ideias, como a loja virtual onde vendemos ebooks e entre outros.</p>
-  </div>
-
-  <main>
-    <div class="quaresma">
-      <h2>O CATÓLICO ONLINE ESTÁ NA</h2>
-      <h1><strong>QUARESMA</strong></h1>
-      <p>A Quaresma é um período de 40 dias de preparação espiritual para a Páscoa, que começa na Quarta-Feira de Cinzas e antecede a continuação da ressurreição de Jesus Cristo, sendo marcado por reflexão, oração, jejum e penitência, inspirado nos 40 dias que Jesus passou no deserto, simbolizando purificação e conversão para os cristãos. </p>
-      <img src="https://i.postimg.cc/RVgmcss5/O-tempo-da-Quaresma.jpg">
+  <div class="container">
+    <div>
+      <img src="https://i.postimg.cc/bJYs3Mtf/image.png" alt="Dom Nico consertando o sistema">
     </div>
-  </main>
-
-  <main class="ccb" id="ccbid">
-    <div class="ccb-title">
-      <br>
-      <h1>Católico Criativo Brasil</h1>
-      <h2>Primeira edição • 2026</h2>
-    </div>
-    <div class="ccb-descr">
-      <p>Um novo evento chegou no Católico Online! O CCB ( Católico Criativo Brasil ) chegou para alegrar o dia dos católicos.
+    <div>
+      <h1>Estamos em manutenção</h1>
+      <p>
+        Dom Nico está trabalhando para deixar o <strong>Católico Online</strong> ainda melhor para você.
+        Em breve retornaremos com uma experiência renovada, mais rápida e organizada.
       </p>
-      <h3>Oque é e como funciona?</h3>
-      <p>O CCB vai ser um evento online dentro do <strong><a href="https://cesardevorgbj.github.io/cat-lico-online/">Católico Online</a></strong> onde os membros poderão criar artes católicas ( de qualquer tipo ), construções no minecraft, histórias, sites, projetos, softwares, e muito mais...</p>
-      <h3>Quando começa?</h3>
-      <p>O evento já estar online! Solte sua criatividade!</p>
-      <h3>Breve Aviso</h3>
-      <p>Não irá precisar fazer inscrições para a participação!</p>
-      <p>Os posts com mais curtidas serão destacados na comunidade onde acontecerá o evento!</p>
-      <h3><strong>PARTICIPE AGORA</strong></h3>
-      <a href="https://discord.gg/cBWPrjpYmJ"><button class="ccb-button" >Participar</button></a>
-      <br>
-      <br>
-      <br>
+      <a class="btn" href="https://discord.gg/uHR9nqrMCC" target="_blank">Entrar no Discord</a>
+      <div class="status">“Tudo para maior glória de Deus.”</div>
     </div>
-  </main>
-
-  <main class="santos" id="santosid">
-    <h2>Santos da Igreja Católica Apostólica Romana</h2>
-    <h3>História da santidade Católica Romana</h3>
-    <p>A história da santidade católica romana evoluiu da veneração primitiva aosmártires (séculos I-IV), que deram a vida por Cristo, passando pela Idade Média com a ascensão de santos ascetas, monges e doutores da Igreja , e se formalizaram com o processo de canonização a partir do século X, estabelecendo um caminho universal para o reconhecimento de religião que viveram virtudes heroicas, refletindo a santidade de Cristo e tornando-se modelos para todos, com o objetivo de viver a fé em sua plenitude, como exemplificado por figuras como São Pedro, Maria, e outros incontáveis ​​que buscaram imitar Jesus . </p>
-    <img class="santos-img" src="https://i.postimg.cc/k4rWGD51/catolicismo-2.jpg">
-    <div class="são-miguel">
-      <h3>São Miguel Arcanjo</h3>
-      <p>Arcanjo Miguel é o chefe da milícia celestial, um guerreiro que liderou os anjos fiéis na batalha contra Lúcifer e seus seguidores, expulsando-os do Céu, e é venerado como o defensor da fé e da Igreja, o protetor dos fiéis contra o mal e o guia dos espíritos na Terra, sendo invocado em momentos de perigo e angústia. Seu nome significa "Quem é como Deus?", um brado de humildade e lealdade.</p>
-      <img src="https://i.postimg.cc/3N0RvFbW/S-o-Miguel-Arcanjo.webp">
-    </div>
-    <div class="ns-aviso">
-      <h3>Nossa Senhora do Aviso</h3>
-      <p>No coração de uma pequena vila espanhola, uma revelação mudou para sempre a história de seus habitantes. No século XVI, um pastor humilde, enquanto conduzia seu rebanho pelas montanhas, foi atraído por uma luz misteriosa emanando de uma caverna isolada. Ao se aproximar, encontrou uma imagem sagrada da Virgem Maria, um sinal claro da presença e da proteção da Mãe de Deus. Assim começou a devoção a Nossa Senhora do Aviso, um título que ecoa a natureza divina desta aparição, vista como um chamado celestial à conversão e à renovação espiritual.</p>
-      <p>nome 'Nossa Senhora do Aviso' não foi escolhido ao acaso. Ele reflete a profunda convicção dos fiéis de que a Virgem Maria apareceu para alertar e orientar seu povo em tempos de provação. Este evento singular rapidamente despertou a fé e a devoção dos habitantes da vila, que passaram a venerar a imagem com fervor, reconhecendo nela um sinal do céu. O local da aparição, antes esquecido nas montanhas, transformou-se em um santuário, onde os fiéis começaram a peregrinar, buscando a proteção e a intercessão de Nossa Senhora.</p>
-      <p>Milagres que Fortaleceram a Devoção
-Não demorou para que milagres fossem atribuídos à intercessão de Nossa Senhora do Aviso. Em tempos de crises, como pragas e desastres naturais, a população se voltava para Maria com fé renovada. Um dos relatos mais comoventes narra como uma terrível praga, que ameaçava dizimar a vila, foi interrompida após uma procissão fervorosa com a imagem da Virgem. A notícia desse milagre espalhou-se rapidamente, atraindo devotos de regiões.</p>
-      <img class="ns-avisoimg" src="https://i.postimg.cc/sxCX5hF6/360140369-651939370297908-1359747825158872490-n-1-e1699822570144.webp">
-    </div>
-    <div class="ns-assunção">
-      <h3>Nossa Senhora da Assunção</h3>
-      <p>Maria foi concebida sem pecado e teve como missão dar à luz a Jesus, que mais tarde viria a ser aquele que morreu em expiação dos nossos pecados. Como gratidão de Deus à Virgem Maria, ela foi elevada ao céu em corpo e alma pelos anjos. Este evento, chamado de Assunção, foi proclamado pelo Papa Pio XII como dogma da fé, em 1950. Por causa de sua Assunção, Maria não teve que aguardar o fim dos tempos para obter a ressurreição corpórea.</p>
-      <p>A proclamação da Assunção de Maria não é considerada muito antiga. Mesmo assim, a Assunção já era aceita pelos cristãos desde o tempo dos apóstolos. No século XIV, em Portugal, um fato notável aumentou a fé do povo na Nossa Senhora da Assunção. Dias antes da festa de Assunção de 1385, os castelhanos, com a intenção de tomarem o poder, realizaram uma invasão a Portugal para impedir que o Mestre de Avis, que viria a ser D. João I, fosse o sucessor do rei Dom Fernando, que teve uma morte prematura e não deixou um herdeiro para o trono. O reino invasor, desejando conquistar Portugal, já tinha atravessado a fronteira quando Dom João I implorou a proteção da Virgem Maria e prometeu construir um imponente templo em homenagem a Ela, caso os portugueses obtivessem sucesso na batalha. Nossa Senhora atendeu seus pedidos e Portugal foi salvo. Dom João I, demonstrando gratidão, mandou que todas as catedrais de Portugal fossem consagradas a Nossa Senhora da Assunção.</p>
-      <img src="https://i.postimg.cc/T3sWphPD/cac71b1e08.webp">
-    </div>
-    <div class="carlosacutis">
-      <h3>São Carlos Acutis</h3>
-      <h5>Biografia</h5>
-      <p>Fonte: <a href="https://www.vaticannews.va/pt/papa/news/2025-09/papa-leao-xiv-missa-canonizacao-biografia-acutis.html"><strong>Vatican News</strong></p></a> 
-      <p>Carlo Acutis é o primeiro santo da geração millennial. Ele nasceu em Londres (Reino Unido) em 3 de maio de 1991. Na época, seus pais, ambos originários da Itália, moravam em Londres, onde seu pai trabalhava. Carlo foi batizado duas semanas após seu nascimento.</p>
-      <p>No outono daquele ano, a família retornou a Milão, onde Carlo frequentou a escola primária no Instituto Tommaseo, administrado pelas Irmãs de Santa Marcelina (Marcelinas). Ele foi autorizado a receber sua Primeira Comunhão aos sete anos de idade no Mosteiro das Eremitas Ambrosianas em Bernaga di Perego (Lecco).</p>
-      <p>Ao longo de sua vida, Carlo demonstrou profunda devoção à Eucaristia. Participava da Missa todos os dias e fazia uma "comunhão espiritual" nos dias em que estava ocupado com os estudos. Frequentemente realizava pequenos sacrifícios em reparação pela falta de amor demonstrada a Jesus na Eucaristia e contava histórias sobre isso aos seus amigos. Suas palavras, "A Eucaristia é minha auto-estrada para o céu", tornaram-se famosas.</p>
-      <p>Após o ensino fundamental, matriculou-se no clássico Instituto Leone XIII, em Milão, fundado pela Companhia de Jesus. Além de suas atividades escolares, foi catequista em sua paróquia, Santa Maria Segreta, em Milão, onde aprendeu a projetar e criar páginas web enquanto trabalhava no site da paróquia com um aluno de engenharia da computação. Desenvolveu tamanha paixão por esse tipo de trabalho que, no verão de 2006, projetou um site para um projeto de promoção do voluntariado em sua escola e trabalhou na página da Pontifícia Academia Cultorum Martyrum, da qual sua mãe participava. Ele também usou o computador para criar um layout para a oração do Rosário.</p>
-      <p>Carlo era um adolescente alegre e extrovertido, de bom coração. Não escondia sua fé e seu amor por Jesus. Estava sempre disposto a ajudar um colega necessitado e era amigo dos pobres de sua vizinhança, dando-lhes parte de sua mesada quando pediam ajuda. Ele costumava dizer: "Estar sempre perto de Jesus, esse é o meu projeto de vida". Enquanto passava parte das férias de verão em Assis (Perúgia), adotou a espiritualidade franciscana de alegria, contemplação e respeito pela criação, busca pela paz e proximidade com os mais necessitados.</p>
-      <p>Em outubro de 2006, foi diagnosticado com uma forma agressiva de leucemia. Em poucos dias, sua saúde piorou. Ele ofereceu seu sofrimento ao Santo Padre, pelo bem da Igreja e pela esperança de ir para o céu. Após ser internado no Hospital San Gerardo, em Monza, recebeu o Sacramento da Unção dos Enfermos. Em 12 de outubro de 2006, aos 15 anos e 5 meses, Carlo faleceu.</p>
-      <p>Seu corpo foi sepultado inicialmente no túmulo da família em Ternengo (Biella) e, posteriormente, transferido para o cemitério de Assis. Há alguns anos, ele é conservado no Santuário do Despojamento, na mesma cidade de São Francisco, onde é exposto à veneração de um grande número de fiéis provenientes de todo o mundo.</p>
-      <p>Apenas cinco anos após a morte de Carlo, foi fundada em Milão a Associação "Amigos de Carlo Acutis", com o objetivo de promover sua causa de beatificação e canonização. A investigação diocesana foi realizada em Milão entre 2013 e 2016 e, em 5 de julho de 2018, o Papa Francisco autorizou a então Congregação para as Causas dos Santos a promulgar o decreto declarando que Carlo havia praticado as virtudes cristãs em grau heroico.</p>
-      <p>Sucessivamente, o mesmo Papa reconheceu o primeiro milagre atribuído à intercessão de Carlo, ocorrido  na Arquidiocese de Campo Grande (Brasil), em 2013. Isso possibilitou a celebração de sua beatificação em 10 de outubro de 2020, na Basílica Superior de São Francisco, em Assis.</p>
-      <p>Por fim, o Papa Francisco, ao aprovar um segundo milagre realizado por Deus por intercessão do Beato Carlo Acutis, ocorrido em Florença em 2022, abriu caminho para sua canonização.</p>
-      <h5>História</h5>
-      <p>São Carlo Acutis foi um adolescente italiano (1991-2006) conhecido como "santo da internet" por usar sua habilidade com tecnologia para evangelizar, criando sites sobre milagres eucarísticos, sendo beatificado em 2020 e canonizado como santo em 2025, após o reconhecimento de milagres no Brasil e em Florença, tornando-se um exemplo de fé moderna e profunda para os jovens, mesmo morrendo jovem de leucemia. </p>
-      <img src="https://i.postimg.cc/4yKp8tnN/Carlo-Acutis.jpg">
-    </div>
-    <div class="franciscoassis">
-      <h3>São Francisco de Assis</h3>
-      <h5>História</h5><p>Fonte: <a href="https://www.vaticannews.va/pt/igreja/news/2018-10/sao-francisco-padroeiro-assis.html"><strong>Vatican News</strong></p></a>
-     <p>São Francisco de Assis (1182-1226)foi um jovem rico da Itália que renunciou à sua fortuna para viver uma vida de pobreza, humildade e serviço, fundando a Ordem dos Frades Menores e dedicando-se aos pobres, aos doentes e à natureza, tornando-se um símbolo de renovação espiritual e protetor dos animais, famoso por sua conversão após visões místicas e por receber os estigmas, e canonizado rapidamente em 1228, impactando a Igreja com seu radicalismo evangélico e amor pela criação.</p>
-      <img src="https://i.postimg.cc/MGpknKnS/s-l400.jpg">
-    </div>
-    <div class="agostinho" id="agostinhoid">
-      <h3>Santo Agostinho</h3>
-      <h5>Biografia</h5>
-      <p>FONTE: <a href="https://www.vaticannews.va/pt/igreja/news/2025-05/santo-agostinho-seguidor-senhor-igreja-reino-deus.html"><strong>Vatican News</strong></a></p>
-      <p>Santo Agostinho foi uma personalidade profunda seja no nível de filosofia como de teologia. Foi um polemista, escritor, pastor. São muitas as qualidades que se completam de uma forma mútua a respeito do Bispo de Hipona que fez o ser humano Santo Agostinho uma pessoa muito importante para a vida da Igreja e para o mundo. Ele unia em si a energia criadora de Tertuliano, a largueza de espírito de Orígenes, as idéias e as concretizações dos maiores filósofos, Platão e Aristóteles[1]. Após um longo caminho percorrido sendo catecúmeno, ele viveu o seguimento a Jesus Cristo e à sua Igreja, sendo um bom cristão, monge, sacerdote e bispo. </p>
-      <h5>Os mistérios cristãos</h5>
-      <p>Santo Agostinho tratou dos mistérios cristãos. Tudo isso foi feito com muita humildade e ardor de espírito, determinando um grande progresso dogmático que a história da Teologia teve em todos os períodos da sua história. Em seus escritos nós encontramos a importância da graça de Deus e da responsabilidade humana, a doutrina em relação ao mistério de Deus Uno e Trino, a Redenção, a Salvação do gênero humano, os Sacramentos, a Igreja, a Escatologia, as últimas realidades.</p>
-      <h5>Os argumentos teologicos e sociais</h5>
-      <p>Muitos argumentos teológicos e sociais foram tratados por Santo Agostinho. Ele era bispo que viveu a eclesialidade com a Igreja do Senhor, em comunhão com o Bispo de Roma e também era preocupado com as pessoas que viviam em seu tempo, sobretudo aquelas que eram sofredoras, as pobres, as necessitadas. Ele teve uma palavra sobre a moral centralizada no mandamento do amor do Senhor, a Deus, ao próximo como a si mesmo (Cfr. Mt 22,37-39). Ele também falou muito das questões sociais, como a solidariedade, a ajuda para as pessoas carentes e pobres, a partilha. Ele teve presente também a política como bem comum para todas as pessoas.</p>
-      <h5>A verdade</h5>
-      <p>Santo Agostinho buscou a Verdade nos níveis humano e divino, afirmando que Jesus é a Verdade (cfr. Jo 14,6) na qual todas as pessoas são chamadas a segui-lo. Ele era convicto da originalidade da doutrina cristã, católica, defendendo-a contra os grupos diversos em seu tempo, como os pagãos, os judeus, os donatistas, os maniqueus, os arianos, e todas pessoas que não buscavam a Verdade suprema, o Senhor Jesus. Uma atitude muito importante era o diálogo com todas as pessoas, os seus adversários, mantendo respeito com eles, mas ele também era firme em suas convicções religiosas, bíblicas, espirituais, morais, e humanas.</p>
-      <h5>Pastor do senhor e do povo</h5>
-      <p>Santo Agostinho foi um grande pastor no seguimento a Jesus Cristo e à Igreja. Ele buscava na comunidade, o sentido do pastoreio em unidade com Jesus, o Pastor dos pastores. Ele definia-se como servo de Cristo e servo dos servos de Cristo Jesus. Ele tirava a partir dessas considerações à plena disponibilidade para servir às necessidades dos fiéis, desejando não ser salvo sem a presença deles[5]. Desta forma ele via a graça da salvação dada em sentido comunitário, fraterno.</p>
-      <h5>Mestre e Dicípulo</h5>
-      <p>Ele se sentia mestre em ligação ao Mestre Jesus Cristo quando ensinava, procurando também testemunhar com a vida a Palavra de Deus. Ao mesmo tempo estava presente em sua vida, o sentido do discípulo de Cristo assim como foram os discípulos de Jesus. Nas diversas controvérsias tratadas por ele, tinha um desejo que todas as pessoas fossem discípulas do Senhor, Mestre e eles buscassem a vida na unidade com a Igreja.</p>
-      <h5>Bispo - Cristão</h5>
-      <p>Santo Agostinho teve uma fala e prática bem objetivas em relação ao seu episcopado e o seu ser cristão, seguidor do Senhor na Igreja. Ele disse: “Para vós sou bispo; convosco, sou cristão ”[7]. Ele não negava a sua missão para com os fieis, o povo de Deus no sentido de ser bispo, mas tinha presente que ele era cristão como o povo de Deus, seguidor de Jesus Cristo e de sua Igreja. Ele também dizia que deveria levar adiante a missão recebida não escondendo certa preocupação, mas ele ficava consolado pelo fato de ser cristão com todo o povo de Deus a ele dado.</p>
-      <p>Santo Agostinho seja uma força no amor a Jesus Cristo e de sua comunidade eclesial. Assim como ele viveu a sua doação pela Igreja, pelo Reino seja também para nós um modelo de vida para que nós nos doemos aos outros e um dia sejamos participante do Reino dos céus.</p>
-      <img src="https://i.postimg.cc/8kfyqdgP/Saint-Augustine-by-Philippe-de-Champaigne.jpg">
-    </div>
-  </main>
-
-  <main class="comunidade" id="comunidadeid">
-    <div class="comunidade">
-      <h1>COMUNIDADE CATÓLICA</h1>
-        <button id="btn">Pegar chave acesso a comunidade</button>
-        <br>
-        <br>
-        <br>
-        <div id="minhaDiv" class="hidden">
-          <h4>CHAVE DE ACESSO</h4>
-          <a href="https://discord.gg/BnfECumqAx"><button>ABRIR</button></a>
-        </div>
-      <h3>Fan arts</h3>
-      <a href="https://discord.com/channels/1421477691353206796/1456031006804017173"><button>CRIAR FAN ART</button></a>
-      <h5>As melhores fan arts serão enviadas aqui!</h5>
-    </div>
-  </main>
-
-  <section id="oraçõesid">
-    <main>
-      <h1>ORAÇÕES</h1>
-      <p>Conheça as orações mais fortes da igreja Católica Apostólica Romana</p>
-      <h5>orações do vatican news ↓</h5>
-      <a href="https://www.vaticannews.va/pt/oracoes.html"><button>Ver orações</button></a>
-    </main>
-  </section>
-
-  <main class="guia" id="guiaid">
-    <h1>GUIA DO CATÓLICO</h1>
-  <a href="https://guia-do-cat-lico.vercel.app/"><button>ACESSAR GUIA</button></a>
-  </main>
-
-  <main class="posts" id="postsid">
-    <h1>Posts</h1>
-    <p>Não tem nada aqui...</p>
-  </main>
-
-  <main class="filosofia" id="filosofiaid">
-    <h1>𝐅𝚰𝐋𝚯𝐒𝚯𝐅𝚰𝚫 𝐂𝚫𝚻Ó𝐋𝚰𝐂𝚫</h1>
-    <p>“𝓒𝓻𝓮𝓲𝓸 𝓹𝓪𝓻𝓪 𝓬𝓸𝓶𝓹𝓻𝓮𝓮𝓷𝓭𝓮𝓻, 𝓮 𝓬𝓸𝓶𝓹𝓻𝓮𝓮𝓷𝓭𝓸 𝓹𝓪𝓻𝓪 𝓬𝓻𝓮𝓻 𝓶𝓮𝓵𝓱𝓸𝓻”</p>
-    <a href="#agostinhoid"><p>- Santo Agostinho</p></a>
-    <br>
-    <br>
-    <div class="inicio">
-      <p>A filosofia e a teologia andam juntas e o projeto  Católico Online trouxe uma seção específica para isso.</p>
-      <h2>Oque é filosofia e Teologia?</h2>
-      <p>A filosofia é uma investigação racional e crítica do mundo e da existência, baseada na razão, enquanto a teologia é o estudo do divino e da fé, baseada na revolução. Elas andam juntas como formas complementares de buscar a verdade, com a filosofia necessária muitas vezes de ferramenta racional para a teologia.</p>
-      <h2>Alguns filosofos e teólogos da igreja católica:</h2>
-      <li>Santo Agostinho de Hipona</li>
-      <li>Santo Tomás de Aquino</li>
-      <li>Santo Anselmo de Cantuária</li>
-      <strong>E obviamente muitos outros...</strong>
-    </div>
-    <div class="filosofia-ato">
-      <h1>ATO FILOSÓFICO</h1>
-    </div>
-  </main>
-
-  <main class="produtos" id="produtosid">
-    <h1>PRODUTOS</h1>
-    <h3>EBOOK SÃO CARLOS ACUTIS</h3>
-    <img class="imgsaocarlos" src="https://i.postimg.cc/BnFpz4rr/EBOOK.png">
-    <h3>PREÇO: R$12,00</h3>
-    <a href="https://pay.kiwify.com.br/1tkG9zngfgf"><button>IR PARA PÁGINA DE COMPRA</button></a>
-  <br>
-<footer>
-© 2026 - Projeto Católico - Católico Online
-</footer>
-
-<script>
-
-const btn = document.getElementById("btn");
-const div = document.getElementById("minhaDiv");
-
-
-btn.addEventListener("click", () => {
-div.classList.toggle("hidden");
-});
-
-const feed = document.getElementById("feed");
-
-function carregar() {
-  const posts = JSON.parse(localStorage.getItem("posts")) || [];
-  feed.innerHTML = "";
-
-  posts.forEach(p => {
-    feed.innerHTML += `
-    <div class="videodiv">
-      <h4>${p.titulo}</h4>
-      <video controls src="${p.video}"></video>
-      <p>${p.descricao}</p>
-      <div class="user-info">
-        <img src="${p.avatar}">
-        <div>
-          <strong>${p.nome}</strong><br>
-          <small>${p.seguidores} seguidores</small>
-        </div>
-      </div>
-    </div>
-    `;
-  });
-}
-
-function postar() {
-  const nome = username.value;
-  const avatar = avatar.value;
-  const seguidores = seguidores.value;
-  const titulo = titulo.value;
-  const descricao = descricao.value;
-  const file = video.files[0];
-
-  if (!file) return alert("Envie um vídeo!");
-
-  const reader = new FileReader();
-  reader.onload = () => {
-    const posts = JSON.parse(localStorage.getItem("posts")) || [];
-    posts.unshift({
-      nome,
-      avatar,
-      seguidores,
-      titulo,
-      descricao,
-      video: reader.result
-    });
-    localStorage.setItem("posts", JSON.stringify(posts));
-    carregar();
-  };
-
-  reader.readAsDataURL(file);
-}
-
-// =========================
-// ANIMAÇÃO DE ENTRADA (fade + slide)
-// =========================
-
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-document.querySelectorAll("section, .card").forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
-
-
-// =========================
-// EFEITO PARALLAX NO HEADER
-// =========================
-
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const header = document.querySelector("header");
-
-    if (header) {
-        header.style.transform = `translateY(${scrollY * 0.2}px)`;
-    }
-});
-
-
-carregar();
-</script>
-
+  </div>
 </body>
 </html>
